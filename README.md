@@ -1,2 +1,2 @@
-# Gest-o-de-Alunos
+# Alunos
 Projeto para Gestão de Alunos  Java POO
