@@ -52,16 +52,42 @@ public class PrimeiraClassejava {
 				} // fecha while
 			}
 			alunos.add(aluno1); // ADD ALUNO NA LISTA
-
-			for (Aluno aluno : alunos) {
-				if (aluno.getNome().equalsIgnoreCase("mari")) {
-				System.out.println(aluno);
-				System.out.println("REsultado: " + aluno.getAlunoResultado());
-				System.out.println("Resultado: " + aluno.getAlunoResultado());
-				System.out.println("==================================================");
-				break;
-				}
-			}
 		} // fecha For da lista de alunos
+
+		for (int pos = 0; pos < alunos.size(); pos++) {
+
+			Aluno aluno = alunos.get(pos);
+
+			System.out.println("aluno: " + aluno.getNome());
+			System.out.println("Média: " + aluno.getMediaNota());
+
+			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
+
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+
+				System.out.println("Materia: " + disc.getDisciplina() + "Nota: " + disc.getNota());
+
+			}
+		}
+		/*
+		 * for (Aluno aluno : alunos) {
+		 * 
+		 * if (aluno.getNome().equalsIgnoreCase("mari")) { 
+		 * alunos.remove(aluno);
+		 *  break;
+		 * } else { System.out.println(aluno); System.out.println("Média: " +
+		 * aluno.getMediaNota()); System.out.println("REsultado: " +
+		 * aluno.getAlunoResultado());
+		 * System.out.println("=================================================="); } }
+		 * for (Aluno aluno : alunos) {
+		 * System.out.println("Alunos que sobrarma na lista");
+		 * System.out.println(aluno.getNome());
+		 * System.out.println("Suas materias são: ");
+		 * for (Disciplina disciplina : aluno.getDisciplinas()) {
+		 * System.out.println(disciplina.getDisciplina()); }
+		 * 
+		 * }/
+		 */
+
 	}// Fecha Main
 }// Fecha PrimeiraClassejava

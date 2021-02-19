@@ -3,6 +3,8 @@ package gestaodealunos.classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import gestãodealunos.contantes.StatusAluno;
+
 public class Aluno {
 
 	String nome;
@@ -69,22 +71,21 @@ public class Aluno {
 			return false;
 		}
 	}
-	//Metódo Aprovado, reprovado ou Recuperação
-	
-	public String getAlunoResultado(){
+	// Metódo Aprovado, reprovado ou Recuperação
+
+	public String getAlunoResultado() {
 		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 70) {
-				return "Aluno Aprovado";
-			}else {
-				return "Aluno em recuperação";
+				return StatusAluno.APROVADO;
+			} else {
+				return StatusAluno.RECUPERACAO;
 			}
 		} else {
-			return "Aluno Reprovado";
-		}	
+			return StatusAluno.REPROVADO;
+		}
 	}
 
-	
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", disciplinas="
