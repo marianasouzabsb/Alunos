@@ -2,8 +2,8 @@ package gestaodealunos.classes;
 
 public class Disciplina {
 
-	String disciplina;
-	double nota;
+	private String disciplina;
+	private double nota;
 
 	public String getDisciplina() {
 		return disciplina;

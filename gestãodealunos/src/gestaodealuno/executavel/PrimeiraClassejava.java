@@ -29,12 +29,19 @@ public class PrimeiraClassejava {
 			String nome = JOptionPane.showInputDialog("Qual o nome do Aluno " + qtd + "?");
 			String idade = JOptionPane.showInputDialog("Digite a Idade do Aluno");
 			String dataNascimento = JOptionPane.showInputDialog("Digite data de nascimento");
+			String dataMatricula = JOptionPane.showInputDialog("Digite data de Matricula");
+			String nomeEscola = JOptionPane.showInputDialog("Digite o nome da escola");
+			String serieMatriculado = JOptionPane.showInputDialog("Digite a serie do aluno");
 
 			Aluno aluno1 = new Aluno();// faz referencia ao construtor
 
 			aluno1.setNome(nome);
 			aluno1.setIdade(Integer.valueOf(idade));
 			aluno1.setDataNascimento(dataNascimento);
+			aluno1.setSerieMatriculado(dataMatricula);
+			aluno1.setNomeEscola(nomeEscola);
+			aluno1.setSerieMatriculado(serieMatriculado);
+			
 
 			// Para adicionar Disciplinas
 			for (int pos = 1; pos <= 1; pos++) {

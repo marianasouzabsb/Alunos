@@ -5,11 +5,11 @@ import java.util.List;
 
 import gestãodealunos.contantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-	String nome;
-	int idade;
-	String dataNascimento;
+	private String dataMatricula;
+	private String nomeEscola;
+	private String serieMatriculado;
 
 	/*------------------------------------------------*/
 
@@ -48,9 +48,32 @@ public class Aluno {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+	
 
+	public String getDataMatricula() {
+		return dataMatricula;
+	}
+
+	public void setDataMatricula(String dataMatricula) {
+		this.dataMatricula = dataMatricula;
+	}
+
+	public String getNomeEscola() {
+		return nomeEscola;
+	}
+
+	public void setNomeEscola(String nomeEscola) {
+		this.nomeEscola = nomeEscola;
+	}
+
+	public String getSerieMatriculado() {
+		return serieMatriculado;
+	}
+
+	public void setSerieMatriculado(String serieMatriculado) {
+		this.serieMatriculado = serieMatriculado;
+	}
 	// Metódo para calcular a media o aluno
-
 	public double getMediaNota() {
 		double somaNotas = 0.0;
 
@@ -115,6 +138,12 @@ public class Aluno {
 		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
+	}
+	
+	@Override /*Identifica metodo sobreescito*/
+	public boolean pessoaMaiorIdade() {
+		// TODO Auto-generated method stub
+		return super.pessoaMaiorIdade();
 	}
 
 }// Fecha Class Aluno
