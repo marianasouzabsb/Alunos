@@ -26,9 +26,12 @@ public class TestanddoClassesFilhas {
 			
 			
 			
-			System.out.println(aluno1.pessoaMaiorIdade());
+			System.out.println(aluno1.pessoaMaiorIdade() + " : " + aluno1.msgMaioridade());
 			System.out.println(diretor.pessoaMaiorIdade());
 			System.out.println(secretario.pessoaMaiorIdade());
+			System.out.println(aluno1.salario());
+			System.out.println(diretor.salario());
+			System.out.println(secretario.salario());
 	}
 
 }

@@ -7,7 +7,11 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import gestaodealunos.classes.Aluno;
 import gestaodealunos.classes.Disciplina;
+import gestaodealunos.classes.Secretario;
+import gestaodealunos.interfaces.PermitirAcesso;
+import gestãodealunos.classeauxiliar.FuncaoAutenticar;
 import gestãodealunos.contantes.StatusAluno;
+
 
 public class PrimeiraClassejava {
 
@@ -17,7 +21,9 @@ public class PrimeiraClassejava {
 		String login = JOptionPane.showInputDialog("Informe o LOgin");
 		String senha = JOptionPane.showInputDialog("Informe o senha");
 		
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")){
+		PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		
+		if (new FuncaoAutenticar(permitirAcesso).autenticar()){ 
 
 		List<Aluno> alunos = new ArrayList<Aluno>(); // Criando lista de alunos
 
@@ -105,7 +111,8 @@ public class PrimeiraClassejava {
 		
 		}//fecha validação
 		else {
-			System.out.println("Informe o senha e login");
+			JOptionPane.showMessageDialog(  null, "Informe o senha e login");
+			
 		}
 
 		/*

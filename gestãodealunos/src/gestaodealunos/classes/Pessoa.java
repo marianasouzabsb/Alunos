@@ -1,6 +1,7 @@
 package gestaodealunos.classes;
 
-public class Pessoa {
+public abstract class Pessoa {
+	// Class do tipo abratrata não pode ser instanciada
 	// Classe pai/ master ou super class, contém atributos comuns a todos os objetos
 	protected String nome;
 	protected int idade;
@@ -9,6 +10,9 @@ public class Pessoa {
 	protected String numeroCPF;
 	protected String nomeMae;
 	protected String nomePai;
+	
+	//metodo abstract é obrigatório para classes filhas
+	public abstract double salario();
 	
 	public String getNome() {
 		return nome;
