@@ -51,8 +51,8 @@ public class PrimeiraClassejava {
 					String notaDisciplina = JOptionPane.showInputDialog("Digite nota " + pos + " ? ");
 					Disciplina disciplina = new Disciplina();
 					disciplina.setDisciplina(nomeDisciplina);
-					disciplina.setNota(Double.valueOf(notaDisciplina));
-					aluno1.getDisciplinas().add(disciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+					aluno1.getDisciplinas().add(disciplina);	
 				}
 				// Para Remover disciplinas
 				int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina");
